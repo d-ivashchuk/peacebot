@@ -16,11 +16,12 @@ const StyledNewProject = styled.div`
   }
 `
 const StyledList = styled.ul`
+  position: relative;
+  left: 23px;
   padding: 20px;
   max-width: 300px;
   display: flex;
   flex-direction: column;
-  margin: auto;
   li {
     color: white;
     font-size: 24px;

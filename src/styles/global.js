@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import theme from './theme'
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -63,7 +62,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color:${theme.colors.base};
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;
