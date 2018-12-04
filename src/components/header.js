@@ -1,20 +1,21 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import styled from 'styled-components'
 
 import Logo from './Logo/logo'
 
+const StyledHeader = styled.nav`
+  max-width: 1500px;
+  margin: auto;
+`
+
 const Header = ({ siteTitle }) => (
-  <div>
-    <Link
-      to="/"
-    >
+  <StyledHeader>
+    <Link to="/">
       <Logo />
     </Link>
-
-
-
-  </div>
+  </StyledHeader>
 )
 
 Header.propTypes = {
