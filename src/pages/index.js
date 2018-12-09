@@ -1,13 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
+
 import Hero from '../components/Hero/Hero'
-
-
+import Projects from '../components/Projects/Projects'
 
 const IndexPage = () => (
   <>
     <Hero />
-    <Link to="/page-2/">Go to page 2</Link>
+    <Projects />
   </>
 )
 

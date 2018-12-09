@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 
-import Logo from './Logo/logo'
+import Logo from '../Logo/logo'
 
 const StyledHeader = styled.nav`
   max-width: 1500px;
