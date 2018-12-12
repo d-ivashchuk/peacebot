@@ -11,12 +11,17 @@ const StyledButton = styled.button`
   cursor: pointer;
   box-shadow: #15cc79 0px 0px 0px 0px;
   transition: all 0.3s;
+  @media (max-width: 1015px) {
+    transition:all 0.3s;
+    font-size:22px;
+    width: 300px;
+    height: 70px;
+  }
   &:hover {
-    &:hover {
       transform: translateY(-2px);
       transition: all 0.3s;
       box-shadow: rgba(21, 204, 121, 0.68) 1px 4px 16px;
-    }
+    
   }
 `
 const Button = () => {

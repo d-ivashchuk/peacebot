@@ -1,30 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 import Img from 'gatsby-image'
 
 const StyledCard = styled.div`
   max-width: 300px;
   display: flex;
   flex-direction: column;
+  margin:10px;
 `
 const StyledImage = styled(Img)``
 
-const StyledTitle = styled.h1``
+const StyledTitle = styled.h1`
+margin:18px 0 0 0;
+color:#2d3047;
+text-transform:uppercase;
+`
 
-const StyledExcertp = styled.p``
+const StyledExcerpt = styled.p`
+color:#afafb3
+`
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
+  const image = props.project.node.childImageSharp.fluid
+
+  console.log(props.project.node)
   return (
     <StyledCard>
-      {/* <StyledImage /> */}
-      <StyledTitle>123</StyledTitle>
-      <StyledExcertp>
+      <StyledImage fluid={image} />
+      <StyledTitle>Stimpo</StyledTitle>
+      <StyledExcerpt>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
         laboriosam.
-      </StyledExcertp>
+      </StyledExcerpt>
     </StyledCard>
   )
 }
 
 export default ProjectCard
+
+

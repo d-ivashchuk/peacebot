@@ -17,9 +17,12 @@ const StyledInfo = styled.div`
   line-height: 1.23;
   letter-spacing: normal;
   color: white;
+  transition:all 0.3s;
   @media (max-width: 1015px) {
+    transition:all 0.3s;
     margin-top: 50px;
     text-align: center;
+    font-size:50px;
   }
 `
 

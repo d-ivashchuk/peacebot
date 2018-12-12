@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import Logo from '../Logo/logo'
 
 const StyledHeader = styled.nav`
-  max-width: 1500px;
+  max-width: 1000px;
   margin: auto;
 `
 

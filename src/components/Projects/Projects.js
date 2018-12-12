@@ -6,27 +6,30 @@ import Arrow from '../../assets/arrow.svg'
 import ProjectCard from '../ProjectCard/ProjectCard'
 
 const StyledProjects = styled.div`
+  position:relative;
   max-width: 1000px;
-  height: 552px;
   border-radius: 8px;
   background-color: #ffffff;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 120px auto;
 `
 const ProjectsHeader = styled.div`
-  position: relative;
+  position:relative;
   display: flex;
-  justify-content: space-between;
+  max-width:1000px;
   align-items: center;
-  width: 850px;
-  margin: auto;
-  padding-top: 20px;
+  justify-content:space-between;
+  margin:30px 30px 20px 30px;
+  font-size:20px;
 `
 const StyledArrow = styled(Arrow)`
-  display: flex;
 `
-const ProjectsBody = styled.div``
+const ProjectsBody = styled.div`
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+`
 
-const Projects = () => {
+const Projects = (props) => {
   return (
     <StyledProjects>
       <ProjectsHeader>
@@ -34,10 +37,13 @@ const Projects = () => {
         <StyledArrow />
       </ProjectsHeader>
       <ProjectsBody>
-        <ProjectCard />
+        <ProjectCard project={props.projects[0]} />
+        <ProjectCard project={props.projects[0]} />
+        <ProjectCard project={props.projects[0]} />
       </ProjectsBody>
     </StyledProjects>
   )
 }
 
 export default Projects
+
