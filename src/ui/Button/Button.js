@@ -17,6 +17,12 @@ const StyledButton = styled.button`
     width: 300px;
     height: 70px;
   }
+  @media (max-width: 500px) {
+    transition:all 0.3s;
+    font-size:22px;
+    width: 250px;
+    height: 70px;
+  }
   &:hover {
       transform: translateY(-2px);
       transition: all 0.3s;

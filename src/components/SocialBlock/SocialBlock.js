@@ -17,6 +17,11 @@ const StyledSocialIcon = styled(SocialIcon)`
   .social-svg-icon {
     fill: white !important;
   }
+  transition:all 0.3s;
+  &:hover{
+    transition:all 0.3s;
+    transform:scale(1.2)
+  }
 `
 const StyledTelegram = styled(Telegram)`
   padding: 5px;
@@ -26,6 +31,11 @@ const StyledTelegram = styled(Telegram)`
   position: relative;
   overflow: hidden;
   vertical-align: middle;
+  transition:all 0.3s;
+  &:hover{
+    transition:all 0.3s;
+    transform:scale(1.2)
+  }
 `
 
 const SocialBlock = () => {

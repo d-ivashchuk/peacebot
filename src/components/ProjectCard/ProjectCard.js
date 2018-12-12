@@ -8,7 +8,7 @@ const StyledCard = styled.div`
   max-width: 300px;
   display: flex;
   flex-direction: column;
-  margin:10px;
+  margin:12px;
 `
 const StyledImage = styled(Img)``
 

@@ -22,6 +22,14 @@ const ProjectsHeader = styled.div`
   font-size:20px;
 `
 const StyledArrow = styled(Arrow)`
+opacity:0.8;
+transition:all 0.3s;
+&:hover{
+  cursor:pointer;
+  opacity:1;
+  transform:scale(1.2);
+  transition:all 0.3s;
+}
 `
 const ProjectsBody = styled.div`
 display:flex;
