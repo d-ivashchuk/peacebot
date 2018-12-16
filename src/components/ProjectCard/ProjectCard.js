@@ -10,7 +10,9 @@ const StyledCard = styled.div`
   flex-direction: column;
   margin:12px;
 `
-const StyledImage = styled(Img)``
+const StyledImage = styled(Img)`
+max-height:200px;
+`
 
 const StyledTitle = styled.h1`
 margin:18px 0 0 0;
@@ -23,16 +25,14 @@ color:#afafb3
 `
 
 const ProjectCard = (props) => {
-  const image = props.project.node.childImageSharp.fluid
-
-  console.log(props.project.node)
+  const project = props.project.node
+  const picture = project.picture.sizes
   return (
     <StyledCard>
-      <StyledImage fluid={image} />
-      <StyledTitle>Stimpo</StyledTitle>
+      <StyledImage sizes={picture} />
+      <StyledTitle>{project.title}</StyledTitle>
       <StyledExcerpt>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        laboriosam.
+        {project.description}
       </StyledExcerpt>
     </StyledCard>
   )

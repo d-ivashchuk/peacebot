@@ -6,11 +6,11 @@ import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
 
 const IndexPage = (props) => {
-
+  const contentfulData = props.data.allContentfulProject.edges
   return (
     <>
       <Hero />
-      <Projects projects={props.data.allFile.edges} />
+      <Projects projects={contentfulData} />
     </>
   )
 
@@ -20,13 +20,18 @@ export default IndexPage
 
 export const query = graphql`
 query{
-  allFile(filter: {sourceInstanceName: {eq: "project-photos"}}) {
+  allContentfulProject {
     edges {
       node {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
+        title
+        description
+        id
+        dateOfPublish
+        picture {
+          sizes(maxWidth: 1280) {
+              ...GatsbyContentfulSizes
+            }
+          id
         }
       }
     }

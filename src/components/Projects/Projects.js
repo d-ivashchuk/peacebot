@@ -38,6 +38,10 @@ flex-wrap:wrap;
 `
 
 const Projects = (props) => {
+  const allCards = props.projects.map(project =>
+    <ProjectCard key={project.node.id} project={project} />
+  )
+
   return (
     <StyledProjects>
       <ProjectsHeader>
@@ -45,9 +49,7 @@ const Projects = (props) => {
         <StyledArrow />
       </ProjectsHeader>
       <ProjectsBody>
-        <ProjectCard project={props.projects[0]} />
-        <ProjectCard project={props.projects[0]} />
-        <ProjectCard project={props.projects[0]} />
+        {allCards}
       </ProjectsBody>
     </StyledProjects>
   )
