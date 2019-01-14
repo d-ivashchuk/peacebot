@@ -2,6 +2,10 @@ import React from 'react'
 
 import { graphql } from 'gatsby'
 
+// import x from '../assets/x.jpg'
+// import y from '../assets/y.jpg'
+// import z from '../assets/z.jpg'
+
 import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
 
