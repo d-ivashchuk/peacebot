@@ -1,0 +1,19 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 100% 100%" enable-background="new 0 0 100% 100%" xml:space="preserve">
+<pattern width="90" height="90" patternUnits="userSpaceOnUse" id="Unnamed_Pattern" viewBox="50 -100 100 100" overflow="visible">
+ <g>
+ <polygon fill="#c4e0d3" points="50,-100 150,-100 150,0 50,0 "/>
+ <g>
+ <polygon fill="#ff6596" points="200,-50 150,-50 130,-25 150,0 200,0 180,-25 "/>
+ </g>
+ <g>
+ <polygon fill="#0299a7" points="100,-50 150,-50 170,-75 150,-100 100,-100 120,-75 "/>
+ <polygon fill="#ff0a5c" points="100,-50 50,-50 30,-25 50,0 100,0 80,-25 "/>
+ </g>
+ <g>
+ <polygon fill="#ff7635" points="0,-50 50,-50 70,-75 50,-100 0,-100 20,-75 "/>
+ </g>
+ </g>
+</pattern>
+<rect fill="url(#Unnamed_Pattern)" width="100%" height="100%"/>
+</svg>

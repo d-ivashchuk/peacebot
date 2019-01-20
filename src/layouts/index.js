@@ -5,7 +5,22 @@ import { StaticQuery, graphql } from 'gatsby'
 import './index.css'
 import GlobalStyle from '../styles/global'
 
+import styled from 'styled-components'
+
 import Header from '../components/Header/header'
+
+import pattern from '../assets/pattern.svg'
+
+const Bg = styled(pattern)`
+  position: fixed !important;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,6 +44,8 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+        <Bg />
+
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>{children}</div>
         <GlobalStyle />
