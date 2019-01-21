@@ -4,11 +4,9 @@ import styled from 'styled-components'
 import Button from '../../ui/Button/Button'
 
 const StyledNewProject = styled.div`
-  padding: 25px;
   width: 500px;
   min-height: 400px;
   border-radius: 8px;
-  background-color: #2d3047;
   display: flex;
   flex-direction: column;
   button {
@@ -17,44 +15,49 @@ const StyledNewProject = styled.div`
 `
 const StyledList = styled.ul`
   position: relative;
-  margin:auto;
-  left:-11px;
-  padding: 20px;
-  padding-left:0;
-  max-width: 300px;
+  margin: auto;
+  left: -11px;
+  padding-left: 0;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
-  transition:all 0.3s;
+  transition: all 0.3s;
   @media (min-width: 1015px) {
-    transition:all 0.3s ;
-    left:-40px;
+    transition: all 0.3s;
+    left: -40px;
   }
   @media (max-width: 500px) {
-    transition:all 0.3s;
-    left:13px;
+    transition: all 0.3s;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   li {
-    color: white;
-    font-size: 24px;
+    color: #2d3047;
+    font-size: 25px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.67;
     letter-spacing: normal;
     margin-bottom: 10px;
+
+    @media (min-width: 1015px) {
+      font-size: 20px;
+    }
+    @media (max-width: 500px) {
+      font-size: 16px;
+      text-align: center;
+    }
   }
 `
 
 class NewProject extends Component {
   render() {
     const listItems = [
-      'Logotypes',
-      'Brand Identity',
-      'Design Audit',
-      'Social Media Posts',
-      'Illustrations',
-      'Icons',
+      'Logotypes / Brand Identity',
+      'UI Design / Social Media Posts',
+      'Illustrations / Icons',
     ]
 
     const list = listItems.map(item => {

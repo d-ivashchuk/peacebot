@@ -2,38 +2,36 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
-  width: 360px;
-  height: 80px;
-  border-radius: 8px;
+  position: relative;
+  top: 22px;
+  width: 500px;
+  height: 78px;
+  border: 1.5px solid #15cc79;
+  border-radius: 0 6px 6px 0;
   font-size: 30px;
-  background-color: #15cc79;
-  color: white;
+  color: #15cc79;
   cursor: pointer;
   box-shadow: #15cc79 0px 0px 0px 0px;
   transition: all 0.3s;
   @media (max-width: 1015px) {
-    transition:all 0.3s;
-    font-size:22px;
+    transition: all 0.3s;
+    font-size: 22px;
     width: 300px;
     height: 70px;
+    border-radius: 6px;
   }
   @media (max-width: 500px) {
-    transition:all 0.3s;
-    font-size:22px;
+    transition: all 0.3s;
+    font-size: 22px;
     width: 250px;
     height: 70px;
-  }
-  &:hover {
-      transform: translateY(-2px);
-      transition: all 0.3s;
-      box-shadow: rgba(21, 204, 121, 0.68) 1px 4px 16px;
-    
+    margin-top: 0;
   }
 `
 const Button = () => {
   return (
     <StyledButton onClick={() => alert('new project')}>
-      New Project
+      Start Project
     </StyledButton>
   )
 }

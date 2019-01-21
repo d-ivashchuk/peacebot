@@ -5,22 +5,27 @@ import Telegram from '../../assets/telegram.svg'
 
 const StyledSocialBlock = styled.div`
   position: relative;
-  top: 20px;
+  border: 1.5px solid #d5d6da;
+  border-right: 0;
+  border-radius: 6px 0 0 6px;
+  top: 17px;
   @media (max-width: 1015px) {
     position: relative;
     top: 0;
-    padding: 80px;
+    padding: 50px;
+    border: 0;
   }
 `
 
 const StyledSocialIcon = styled(SocialIcon)`
   .social-svg-icon {
-    fill: white !important;
+    fill: #2d3047 !important;
   }
-  transition:all 0.3s;
-  &:hover{
-    transition:all 0.3s;
-    transform:scale(1.2)
+  margin-right: 10px;
+  transition: all 0.3s;
+  &:hover {
+    transition: all 0.3s;
+    transform: scale(1.2);
   }
 `
 const StyledTelegram = styled(Telegram)`
@@ -31,10 +36,10 @@ const StyledTelegram = styled(Telegram)`
   position: relative;
   overflow: hidden;
   vertical-align: middle;
-  transition:all 0.3s;
-  &:hover{
-    transition:all 0.3s;
-    transform:scale(1.2)
+  transition: all 0.3s;
+  &:hover {
+    transition: all 0.3s;
+    transform: scale(1.2);
   }
 `
 

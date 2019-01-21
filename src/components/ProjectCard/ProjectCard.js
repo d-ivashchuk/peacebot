@@ -1,43 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 import Img from 'gatsby-image'
 
 const StyledCard = styled.div`
   max-width: 300px;
   display: flex;
   flex-direction: column;
-  margin:12px;
+  margin: 12px;
 `
 const StyledImage = styled(Img)`
-max-height:200px;
+  max-height: 200px;
 `
 
 const StyledTitle = styled.h1`
-margin:18px 0 0 0;
-color:#2d3047;
-text-transform:uppercase;
+  font-size: 28px;
+  margin: 18px 0 0 0;
+  color: #2d3047;
+  text-transform: uppercase;
 `
 
 const StyledExcerpt = styled.p`
-color:#afafb3
+  color: #afafb3;
+  font-size: 18px;
 `
 
-const ProjectCard = (props) => {
+const ProjectCard = props => {
   const project = props.project.node
   const picture = project.picture.sizes
   return (
     <StyledCard>
       <StyledImage sizes={picture} />
       <StyledTitle>{project.title}</StyledTitle>
-      <StyledExcerpt>
-        {project.description}
-      </StyledExcerpt>
+      <StyledExcerpt>{project.description}</StyledExcerpt>
     </StyledCard>
   )
 }
 
 export default ProjectCard
-
-

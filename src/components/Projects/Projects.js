@@ -18,8 +18,13 @@ const ProjectsHeader = styled.div`
   max-width: 1000px;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 30px 20px 30px;
+  margin: 30px 50px 20px 50px;
   font-size: 20px;
+  @media (max-width: 500px) {
+    h3 {
+      font-size: 20px;
+    }
+  }
 `
 const StyledArrow = styled(Arrow)`
   opacity: 0.8;
@@ -47,7 +52,7 @@ const Projects = props => {
   return (
     <StyledProjects>
       <ProjectsHeader>
-        <h3>Latest Projects</h3>
+        <h3>Three latest projects</h3>
         <StyledArrow />
       </ProjectsHeader>
       <ProjectsBody>{allCards}</ProjectsBody>
