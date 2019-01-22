@@ -7,7 +7,12 @@ import Logo from '../Logo/logo'
 
 const StyledHeader = styled.nav`
   max-width: 1000px;
-  margin: auto;
+  display:flex;
+  transition: all 0.3s;
+    @media (max-width: 500px) {
+      justify-content:center;
+      transition: all 0.3s;
+    }
 `
 
 const Header = ({ siteTitle }) => (

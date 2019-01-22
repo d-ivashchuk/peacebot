@@ -25,7 +25,6 @@ const StyledButton = styled.button`
     font-size: 22px;
     width: 250px;
     height: 70px;
-    margin-top: 0;
   }
 `
 const Button = () => {

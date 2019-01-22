@@ -12,6 +12,9 @@ const StyledNewProject = styled.div`
   button {
     margin: auto;
   }
+  @media (max-width: 500px) {
+    min-height:250px;
+  }
 `
 const StyledList = styled.ul`
   position: relative;

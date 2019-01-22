@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
 
-const IndexPage = props => {
+const IndexPage = (props) => {
   const contentfulData = props.data.allContentfulProject.edges
   return (
     <>
@@ -18,22 +18,23 @@ const IndexPage = props => {
 export default IndexPage
 
 export const query = graphql`
-  query {
-    allContentfulProject {
-      edges {
-        node {
-          title
-          description
-          id
-          dateOfPublish
-          picture {
-            sizes(maxWidth: 1280) {
+query{
+  allContentfulProject {
+    edges {
+      node {
+        title
+        description
+        id
+        dateOfPublish
+        picture {
+          sizes(maxWidth: 1280) {
               ...GatsbyContentfulSizes
             }
-            id
-          }
+          id
         }
       }
     }
   }
+}
+
 `
