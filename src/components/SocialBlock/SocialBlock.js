@@ -20,6 +20,7 @@ const StyledSocialBlock = styled.div`
     margin-right:30px;
   }
   @media (max-width: 1015px) {
+    margin-bottom:40px;
     margin-top:20px;
     display:flex;
     justify-content:center;
@@ -27,6 +28,7 @@ const StyledSocialBlock = styled.div`
     top: 0;
     padding: 50px;
     border: 0;
+    width:400px;
   }
 `
 

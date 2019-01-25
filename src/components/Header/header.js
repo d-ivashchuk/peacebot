@@ -7,9 +7,10 @@ import Logo from '../Logo/logo'
 
 const StyledHeader = styled.nav`
   max-width: 1000px;
-  display:flex;
+  margin:auto;
   transition: all 0.3s;
     @media (max-width: 500px) {
+      display:flex;
       justify-content:center;
       transition: all 0.3s;
     }

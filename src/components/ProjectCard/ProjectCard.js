@@ -23,6 +23,11 @@ const StyledTitle = styled.h1`
 const StyledExcerpt = styled.p`
   color: #afafb3;
   font-size: 18px;
+  font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
 `
 
 const ProjectCard = props => {
