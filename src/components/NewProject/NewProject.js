@@ -37,7 +37,7 @@ const StyledList = styled.ul`
 
   li {
     color: #2d3047;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -46,7 +46,7 @@ const StyledList = styled.ul`
     margin-bottom: 10px;
 
     @media (min-width: 1015px) {
-      font-size: 20px;
+      font-size: 19px;
     }
     @media (max-width: 500px) {
       font-size: 16px;

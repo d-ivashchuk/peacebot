@@ -20,6 +20,7 @@ const StyledInfo = styled.div`
   color: #2d3047;
   transition: all 0.3s;
   @media (max-width: 1015px) {
+    max-width:400px;
     transition: all 0.3s;
     margin-top: 50px;
     text-align: center;
