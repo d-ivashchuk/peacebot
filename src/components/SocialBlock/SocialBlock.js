@@ -20,12 +20,13 @@ const StyledSocialBlock = styled.div`
     margin-right:30px;
   }
   @media (max-width: 1015px) {
-    margin-bottom:40px;
+    margin-bottom:20px;
     margin-top:20px;
     display:flex;
     justify-content:center;
     position: relative;
     top: 0;
+    left:3%;
     padding: 50px;
     border: 0;
     width:400px;

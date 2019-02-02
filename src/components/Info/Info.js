@@ -22,9 +22,9 @@ const StyledInfo = styled.div`
   @media (max-width: 1015px) {
     max-width:400px;
     transition: all 0.3s;
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     padding-left: 0;
   }
 `
