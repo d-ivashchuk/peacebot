@@ -19,8 +19,8 @@ const StyledSocialBlock = styled.div`
     margin-right:30px;
   }
   @media (max-width: 1015px) {
-    margin-bottom:20px;
-    margin-top:20px;
+    margin-bottom:16px;
+
     display:flex;
     justify-content:center;
     position: relative;

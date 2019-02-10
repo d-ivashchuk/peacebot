@@ -3,7 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   html, body {
     margin:0;
-    height:20vh;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   .siteRoot {
     display: flex;

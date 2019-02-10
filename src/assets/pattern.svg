@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 100% 100%">
     <defs>
-        <pattern id="a" width="499.964" height="499.964" patternUnits="userSpaceOnUse" viewBox="0 0 499.964 499.964">
+        <pattern id="a" width="300.4222" height="300.4222" patternUnits="userSpaceOnUse" viewBox="0 0 499.964 499.964">
             <rect width="499.964" height="499.964" fill="none"/>
             <path fill="#f2f2f2" d="M218.825,357.521a2,2,0,0,0-.688,2.744l9.515,15.88a2,2,0,1,0,3.431-2.057l-9.514-15.88A2,2,0,0,0,218.825,357.521Z"/>
             <path fill="#f2f2f2" d="M216.581,160.634a2,2,0,0,0-2.81.324L202.555,175.1a2,2,0,0,0,3.135,2.485l11.216-14.143A2,2,0,0,0,216.581,160.634Z"/>
