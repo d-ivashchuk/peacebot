@@ -9,7 +9,6 @@ const StyledProjects = styled.div`
   position: relative;
   max-width: 1000px;
   border-radius: 8px;
-  background-color: #ffffff;
   margin: 30px auto 120px auto;
 `
 const ProjectsHeader = styled.div`

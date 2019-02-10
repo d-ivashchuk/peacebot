@@ -1,5 +1,4 @@
 import React from 'react'
-import { SocialIcon } from 'react-social-icons'
 import styled from 'styled-components'
 
 import telegram from '../../../static/icons/telegram.svg'
@@ -56,13 +55,6 @@ const StyledSocialIcon = styled.img`
 `
 
 const SocialBlock = () => {
-  const social = [
-    { url: 'https://instagram.com/peacebot', value: 'instagram' },
-    { url: 'https://dribbble.com/peacebot', value: 'dribbble' },
-    { url: 'https://www.behance.net/user/?username=peacebot', value: 'behance' },
-    { url: 'https://twitter.com/peacebot_t', value: 'twitter' },
-    { url: 'https://t.me/peacebot_t', value: 'telegram' },
-  ]
 
   const SocialIcon = ({ link, icon }) => {
     return (

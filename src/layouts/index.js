@@ -13,6 +13,7 @@ import pattern from '../assets/pattern.svg'
 
 const Bg = styled(pattern)`
   position: fixed !important;
+  opacity:0.6;
   margin: 0;
   padding: 0;
   top: 0;
@@ -44,7 +45,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        {/* <Bg /> */}
+        <Bg />
 
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>{children}</div>
