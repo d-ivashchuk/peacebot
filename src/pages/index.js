@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
+import SubmissionForm from '../components/SubmissionForm/SubmissionForm'
 
 const IndexPage = (props) => {
   const contentfulData = props.data.allContentfulProject.edges
@@ -11,6 +12,7 @@ const IndexPage = (props) => {
     <>
       <Hero />
       <Projects projects={contentfulData} />
+      <SubmissionForm />
     </>
   )
 }
