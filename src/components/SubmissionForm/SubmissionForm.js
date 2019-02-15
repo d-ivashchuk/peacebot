@@ -22,6 +22,7 @@ const FormField = styled.p`
 display:flex;
 flex-direction:column;
 textarea{
+    font-size: 16px;
     margin-top:8px;
     max-width:100%;
     min-height:100px;
@@ -84,6 +85,11 @@ p{
 }
 `
 
+const SubLabel = styled.label`
+padding-top:5px;
+color:#9698a3;
+`
+
 class SubmissionForm extends React.Component {
     render() {
         return (
@@ -102,15 +108,18 @@ class SubmissionForm extends React.Component {
                     <FormField>
                         <label>Email </label>
                         <input type="email" name="email" />
+
                     </FormField>
 
                     <FormField>
                         <label>Objective </label>
                         <input type="objective" name="objective" />
+                        <SubLabel >E.G. Logo design</SubLabel>
                     </FormField>
                     <FormField>
                         <label>Additional info </label>
                         <textarea name="additionalInfo"></textarea>
+                        <SubLabel>You can include here any info that will help me understand the project better. (E.g. present guidlines,sketches, thoughts, aims, whatever)</SubLabel>
                     </FormField>
                     <ButtonContainer>
                         <FormButton type="submit">Start Project</FormButton>
