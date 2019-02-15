@@ -10,11 +10,11 @@ const StyledHero = styled.div`
   flex-wrap: wrap;
 `
 
-const Hero = () => {
+const Hero = ({ toggleForm }) => {
   return (
     <StyledHero>
       <Info />
-      <NewProject />
+      <NewProject toggleForm={toggleForm} />
     </StyledHero>
   )
 }

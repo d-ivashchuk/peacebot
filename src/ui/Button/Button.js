@@ -31,9 +31,9 @@ const StyledButton = styled.button`
     height: 70px;
   }
 `
-const Button = () => {
+const Button = ({ clicked }) => {
   return (
-    <StyledButton onClick={() => alert('new project')}>
+    <StyledButton onClick={clicked}>
       Start Project
     </StyledButton>
   )

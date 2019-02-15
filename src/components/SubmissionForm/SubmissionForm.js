@@ -1,18 +1,38 @@
 import React from 'react';
 import styled from 'styled-components'
 
+import cancel from '../../../static/icons/cancel.svg'
+
 const Form = styled.form`
-background-color:white ;
-max-width:400px;
-margin:auto;
-padding-bottom:40px;
+  position: fixed;
+  z-index: 101;
+  background-color: white;
+  width: 50%;
+  max-width: 800px;
+  border-radius: 4px;
+  padding: 30px;
+  left: 25%;
+  top:10px;
+  box-sizing: border-box;
+  transition: opacity 0.3s, display 0.2s;
+  opacity: ${props => (props.show ? '1' : '0')};
+  z-index: ${props => (props.show ? '500' : '-1')};
+  display: : ${props => (props.show ? 'block' : 'none')};
+  @media(max-width: 775px) {
+position:absolute;
+  left: 5%;
+  width:90%;
+  }
+  @media(max-width: 560px) {
+    padding: 10px;
+  }
 *{
     font-weight:100;
     color:#2d3047;
 }
 `
 const FormHeader = styled.h2`
-padding:30px;
+padding:15px;
 text-align:center;
 `
 const FormBody = styled.div`
@@ -90,10 +110,22 @@ padding-top:5px;
 color:#9698a3;
 `
 
+const StyledCancel = styled.img`
+width:20px;
+cursor:pointer;
+transition:all 0.3s;
+margin:10px;
+&:hover{
+    transition:all 0.3s;
+    transform:scale(1.2)
+}
+`
+
 class SubmissionForm extends React.Component {
     render() {
         return (
-            <Form name="contact" action="/success" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+            <Form show={this.props.show} name="contact" action="/success" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <StyledCancel onClick={this.props.toggleForm} src={cancel} />
                 <FormHeader>Let's get <GreenSpan>started</GreenSpan></FormHeader>
                 <FormBody>
                     <p style={{ display: 'none' }}>
@@ -128,9 +160,7 @@ class SubmissionForm extends React.Component {
                         <p>I will process your request within three working days.</p>
                         <p>☀️ Have a nice day</p>
                     </ThanksMessages>
-
                     <div data-netlify-recaptcha="true"></div>
-
                     <input type="hidden" name="form-name" value="contact" />
                 </FormBody>
 

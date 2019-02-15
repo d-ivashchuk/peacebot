@@ -69,7 +69,7 @@ class NewProject extends Component {
     return (
       <StyledNewProject>
         <StyledList>{list}</StyledList>
-        <Button />
+        <Button clicked={this.props.toggleForm} />
       </StyledNewProject>
     )
   }
