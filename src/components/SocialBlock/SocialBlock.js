@@ -9,7 +9,7 @@ import twitter from '../../../static/icons/twitter.svg'
 
 const StyledSocialBlock = styled.div`
   height:78px;
-  padding-left:30px;
+  padding-left:70px;
   position: relative;
   border: 1.5px solid #d5d6da;
   border-right: 0;
@@ -20,7 +20,6 @@ const StyledSocialBlock = styled.div`
   }
   @media (max-width: 1015px) {
     margin-bottom:16px;
-
     display:flex;
     justify-content:center;
     position: relative;
@@ -70,11 +69,11 @@ const SocialBlock = () => {
 
   return (
     <StyledSocialBlock>
-      <SocialIcon link={'https://instagram.com/peacebot'} icon={instagram} />
       <SocialIcon link={'https://dribbble.com/peacebot'} icon={dribbble} />
+      <SocialIcon link={'https://instagram.com/peacebot'} icon={instagram} />
+      <SocialIcon link={'https://t.me/peacebot_t'} icon={telegram} />
       <SocialIcon link={'https://www.behance.net/user/?username=peacebot'} icon={behance} />
       <SocialIcon link={'https://twitter.com/peacebot_t'} icon={twitter} />
-      <SocialIcon link={'https://t.me/peacebot_t'} icon={telegram} />
     </StyledSocialBlock>
   )
 }

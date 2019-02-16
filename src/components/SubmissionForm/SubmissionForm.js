@@ -116,6 +116,7 @@ color:#9698a3;
 const CancelContainer = styled.div`
 display:flex;
 justify-content:flex-end;
+height:50px;
 `
 const StyledCancel = styled.img`
 width:20px;
