@@ -142,17 +142,17 @@ class SubmissionForm extends React.Component {
 
                     <FormField>
                         <label>Your Name </label>
-                        <input type="text" name="name" />
+                        <input type="text" name="name" required />
                     </FormField>
                     <FormField>
                         <label>Email </label>
-                        <input type="email" name="email" />
+                        <input type="email" name="email" required />
 
                     </FormField>
 
                     <FormField>
                         <label>Objective </label>
-                        <input type="objective" name="objective" />
+                        <input type="objective" name="objective" required />
                         <SubLabel >E.G. Logo design</SubLabel>
                     </FormField>
                     <FormField>
