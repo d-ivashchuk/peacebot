@@ -14,17 +14,19 @@ const Form = styled.form`
   left: 25%;
   top:10px;
   box-sizing: border-box;
-  transition: opacity 0.3s, display 0.2s;
+  transition: opacity 0.5s, display 0.3s;
   opacity: ${props => (props.show ? '1' : '0')};
   z-index: ${props => (props.show ? '500' : '-1')};
   display: : ${props => (props.show ? 'block' : 'none')};
   @media(max-width: 775px) {
-position:absolute;
   left: 5%;
   width:90%;
   }
   @media(max-width: 560px) {
     padding: 10px;
+  }
+  @media(max-height: 900px){
+      position:absolute;
   }
 *{
     font-weight:100;
@@ -42,7 +44,8 @@ const FormField = styled.p`
 display:flex;
 flex-direction:column;
 textarea{
-    font-size: 16px;
+    font-family: inherit;
+font-size: inherit;
     margin-top:8px;
     max-width:100%;
     min-height:100px;
@@ -110,6 +113,10 @@ padding-top:5px;
 color:#9698a3;
 `
 
+const CancelContainer = styled.div`
+display:flex;
+justify-content:flex-end;
+`
 const StyledCancel = styled.img`
 width:20px;
 cursor:pointer;
@@ -125,7 +132,7 @@ class SubmissionForm extends React.Component {
     render() {
         return (
             <Form show={this.props.show} name="contact" action="/success" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-                <StyledCancel onClick={this.props.toggleForm} src={cancel} />
+                <CancelContainer><StyledCancel onClick={this.props.toggleForm} src={cancel} /></CancelContainer>
                 <FormHeader>Let's get <GreenSpan>started</GreenSpan></FormHeader>
                 <FormBody>
                     <p style={{ display: 'none' }}>

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const StyledButton = styled.button`
   position: relative;
-
   top: 31.9px;
   width: 500px;
   height: 78px;
@@ -15,6 +14,10 @@ const StyledButton = styled.button`
   cursor: pointer;
   box-shadow: #15cc79 0px 0px 0px 0px;
   transition: all 0.3s;
+  &:hover{
+    background-color:white;
+    color:#15cc79;
+  }
   @media (max-width: 1015px) {
     margin-top:16px !important;
     transition: all 0.3s;
