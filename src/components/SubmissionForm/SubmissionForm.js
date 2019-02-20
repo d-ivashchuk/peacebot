@@ -36,6 +36,7 @@ const Form = styled.form`
 const FormHeader = styled.h2`
 padding:15px;
 text-align:center;
+font-weight:bold;
 `
 const FormBody = styled.div`
 padding:0 15px 0 15px;
@@ -104,7 +105,7 @@ color:#15cc79;
 const ThanksMessages = styled.div`
 p{
     margin-top:20px;
-
+    text-align:center;
 }
 `
 
@@ -166,7 +167,7 @@ class SubmissionForm extends React.Component {
                     </ButtonContainer>
                     <ThanksMessages>
                         <p>I will process your request within three working days.</p>
-                        <p>☀️ Have a nice day</p>
+                        <p>☀️ Have a nice day!</p>
                     </ThanksMessages>
                     <div data-netlify-recaptcha="true"></div>
                     <input type="hidden" name="form-name" value="contact" />
