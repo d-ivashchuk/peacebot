@@ -41,6 +41,13 @@ module.exports = {
         trackingId: `UA-134834116-1`,
       },
     },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 1207425,
+        sv: 6,
+      },
+    },
     'gatsby-plugin-layout',
     'gatsby-plugin-styled-components',
     {
@@ -55,6 +62,5 @@ module.exports = {
         icon: 'src/assets/logo.svg',
       },
     },
-
   ],
 }
