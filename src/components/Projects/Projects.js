@@ -19,6 +19,7 @@ const ProjectsHeader = styled.div`
   justify-content: space-between;
   margin: 30px 50px 20px 50px;
   font-size: 20px;
+  color: #2d3047;
   @media (max-width: 500px) {
     h3 {
       font-size: 20px;

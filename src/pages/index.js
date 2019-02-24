@@ -15,40 +15,41 @@ class IndexPage extends React.Component {
     this.setState({ isFormOpen: !this.state.isFormOpen })
   }
   render() {
-
     const contentfulData = this.props.data.allContentfulProject.edges
     return (
       <>
         <Backdrop show={this.state.isFormOpen} />
-        <SubmissionForm toggleForm={this.toggleForm} show={this.state.isFormOpen} />
+        <SubmissionForm
+          toggleForm={this.toggleForm}
+          show={this.state.isFormOpen}
+        />
         <Hero toggleForm={this.toggleForm} />
         <Projects projects={contentfulData} />
       </>
     )
   }
-
 }
 
 export default IndexPage
 
 export const query = graphql`
-query{
-  allContentfulProject {
-    edges {
-      node {
-        title
-        description
-        id
-        dateOfPublish
-        picture {
-          sizes(maxWidth: 1280) {
+  query {
+    allContentfulProject {
+      edges {
+        node {
+          title
+          id
+          dateOfPublish
+          tag
+          description
+          picture {
+            sizes(maxWidth: 1280) {
               ...GatsbyContentfulSizes
             }
-          id
+            id
+          }
         }
       }
     }
   }
-}
-
 `

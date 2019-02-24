@@ -10,16 +10,16 @@ const StyledButton = styled.button`
   border-radius: 0 6px 6px 0;
   font-size: 30px;
   color: white;
-  background-color:#15cc79;
+  background-color: #15cc79;
   cursor: pointer;
   box-shadow: #15cc79 0px 0px 0px 0px;
   transition: all 0.3s;
-  &:hover{
-    background-color:white;
-    color:#15cc79;
+  &:hover {
+    background-color: white;
+    color: #15cc79;
   }
   @media (max-width: 1015px) {
-    margin-top:16px !important;
+    margin-top: 16px !important;
     transition: all 0.3s;
     font-size: 22px;
     width: 300px;
@@ -27,7 +27,7 @@ const StyledButton = styled.button`
     border-radius: 6px;
   }
   @media (max-width: 500px) {
-    margin-top:10px !important;
+    margin-top: 10px !important;
     transition: all 0.3s;
     font-size: 22px;
     width: 250px;
@@ -35,11 +35,7 @@ const StyledButton = styled.button`
   }
 `
 const Button = ({ clicked }) => {
-  return (
-    <StyledButton onClick={clicked}>
-      Start Project
-    </StyledButton>
-  )
+  return <StyledButton onClick={clicked}>Start Project</StyledButton>
 }
 
 export default Button
