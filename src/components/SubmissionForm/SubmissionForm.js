@@ -185,7 +185,12 @@ class SubmissionForm extends React.Component {
           </ButtonContainer>
           <ThanksMessages>
             <p>I will process your request within three working days.</p>
-            <p>☀️ Have a nice day!</p>
+            <p>
+              <span role="img" aria-label="sun">
+                ☀️
+              </span>{' '}
+              Have a nice day!
+            </p>
           </ThanksMessages>
           <div data-netlify-recaptcha="true" />
           <input type="hidden" name="form-name" value="contact" />

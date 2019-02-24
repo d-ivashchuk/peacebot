@@ -42,6 +42,7 @@ export const query = graphql`
           dateOfPublish
           tag
           description
+          url
           picture {
             sizes(maxWidth: 1280) {
               ...GatsbyContentfulSizes

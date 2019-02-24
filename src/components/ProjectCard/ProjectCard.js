@@ -37,18 +37,25 @@ const StyledDescription = styled.p`
   color: #d5d6da;
 `
 
+const StyledLink = styled.a`
+  text-decoration: none;
+  background: none;
+`
+
 const ProjectCard = props => {
   const project = props.project.node
   const picture = project.picture.sizes
   return (
-    <StyledCard>
-      <StyledImage sizes={picture} />
-      <StyledTitle>{project.title}</StyledTitle>
-      <StyledInfo>
-        <StyledTag>{project.tag}</StyledTag>
-        <StyledDescription>{project.description}</StyledDescription>
-      </StyledInfo>
-    </StyledCard>
+    <StyledLink href={project.url} target="_blank">
+      <StyledCard>
+        <StyledImage sizes={picture} />
+        <StyledTitle>{project.title}</StyledTitle>
+        <StyledInfo>
+          <StyledTag>{project.tag}</StyledTag>
+          <StyledDescription>{project.description}</StyledDescription>
+        </StyledInfo>
+      </StyledCard>
+    </StyledLink>
   )
 }
 
