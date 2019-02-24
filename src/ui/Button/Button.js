@@ -1,6 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
+const fx = keyframes`
+60% {
+            transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+            transform: translateX(100%) rotate(45deg);
+  }
+`
 const StyledButton = styled.button`
   position: relative;
   top: 31.9px;
@@ -14,6 +22,8 @@ const StyledButton = styled.button`
   cursor: pointer;
   box-shadow: #15cc79 0px 0px 0px 0px;
   transition: all 0.3s;
+  display: inline-block;
+  overflow: hidden;
   &:hover {
     background-color: white;
     color: #15cc79;
@@ -34,8 +44,32 @@ const StyledButton = styled.button`
     height: 70px;
   }
 `
+
+const ButtonMask = styled.span`
+  display: block;
+  position: absolute;
+  color:green;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(239, 244, 252,0.5);
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.3s;
+  animation: ${fx} 5s ease-out infinite;
+  ${StyledButton}:hover & { 
+    animation:none;
+}
+  }
+  }
+`
 const Button = ({ clicked }) => {
-  return <StyledButton onClick={clicked}>Start Project</StyledButton>
+  return (
+    <StyledButton onClick={clicked}>
+      <ButtonMask />
+      Start Project
+    </StyledButton>
+  )
 }
 
 export default Button
