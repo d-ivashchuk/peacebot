@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { graphql } from 'gatsby'
+import get from 'lodash/get'
+import Helmet from 'react-helmet'
 
 import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
@@ -16,8 +18,25 @@ class IndexPage extends React.Component {
   }
   render() {
     const contentfulData = this.props.data.allContentfulProject.edges
+    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteDescription = get(
+      this.props,
+      'data.site.siteMetadata.siteDescription'
+    )
     return (
       <>
+        <Helmet
+          htmlAttributes={{ lang: 'en' }}
+          meta={[
+            { name: 'og:title', content: siteTitle },
+            { name: 'og:description', content: siteDescription },
+            // { name: 'og:image', content: 'summary_large_image' },
+            // { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:site', content: '@peacebot_t' },
+            { name: 'twitter:title', content: siteTitle },
+          ]}
+          title={`${siteTitle} `}
+        />
         <Backdrop show={this.state.isFormOpen} />
         <SubmissionForm
           toggleForm={this.toggleForm}
@@ -34,6 +53,11 @@ export default IndexPage
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allContentfulProject {
       edges {
         node {

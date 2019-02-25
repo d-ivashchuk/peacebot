@@ -29,12 +29,12 @@ const ProjectsHeader = styled.div`
 const StyledArrow = styled(Arrow)`
   opacity: 0.8;
   transition: all 0.3s;
-  &:hover {
+  /* &:hover {
     cursor: pointer;
     opacity: 1;
     transform: scale(1.2);
     transition: all 0.3s;
-  }
+  } */
 `
 const ProjectsBody = styled.div`
   display: flex;
@@ -52,7 +52,7 @@ const Projects = props => {
   return (
     <StyledProjects>
       <ProjectsHeader>
-        <h3>Three latest projects</h3>
+        <h3>Latest projects</h3>
         <StyledArrow />
       </ProjectsHeader>
       <ProjectsBody>{allCards}</ProjectsBody>

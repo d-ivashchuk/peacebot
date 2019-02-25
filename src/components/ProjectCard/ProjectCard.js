@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const StyledCard = styled.div`
-  max-width: 310px;
+  max-width: 330px;
   display: flex;
   flex-direction: column;
   margin: 12px;
@@ -14,7 +14,7 @@ const StyledCard = styled.div`
 const StyledImage = styled(Img)`
   height: 200px;
   width: 300px;
-  border-radius: 6px 6px 0 0;
+  border-radius: 4.5px 4.5px 0 0;
   border-bottom: 1.5px solid #d5d6da;
 `
 
@@ -25,8 +25,14 @@ const StyledTitle = styled.h1`
   color: #2d3047;
   text-transform: uppercase;
 `
-const StyledInfo = styled.div`
+const StyledInfoWrapper = styled.div`
+  background-color: white;
   padding: 0 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 6px 6px;
+`
+const StyledInfo = styled.div`
   display: flex;
   justify-content: space-between;
 `
@@ -49,11 +55,13 @@ const ProjectCard = props => {
     <StyledLink href={project.url} target="_blank">
       <StyledCard>
         <StyledImage sizes={picture} />
-        <StyledTitle>{project.title}</StyledTitle>
-        <StyledInfo>
-          <StyledTag>{project.tag}</StyledTag>
-          <StyledDescription>{project.description}</StyledDescription>
-        </StyledInfo>
+        <StyledInfoWrapper>
+          <StyledTitle>{project.title}</StyledTitle>
+          <StyledInfo>
+            <StyledTag>{project.tag}</StyledTag>
+            <StyledDescription>{project.description}</StyledDescription>
+          </StyledInfo>
+        </StyledInfoWrapper>
       </StyledCard>
     </StyledLink>
   )

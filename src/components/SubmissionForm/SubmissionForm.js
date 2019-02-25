@@ -56,6 +56,7 @@ const FormField = styled.p`
     padding: 10px;
     border-radius: 6px;
     border: 2px solid #d5d6da;
+    box-shadow: none;
     transition: border 0.3s;
     color: #2d3047;
     :focus {

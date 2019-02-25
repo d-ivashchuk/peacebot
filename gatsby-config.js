@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Peacebot Home',
+    title: 'Peacebot | Design ',
+    description:
+      'Peacebot is independent designer specializing in minimalism and illustration',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
