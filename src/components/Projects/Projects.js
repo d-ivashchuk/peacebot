@@ -38,15 +38,28 @@ const StyledArrow = styled(Arrow)`
 `
 const ProjectsBody = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  @media (max-width: 1015px) {
+    justify-content: center;
+  }
+  a {
+    &:first-child {
+      div {
+        margin-left: 0;
+      }
+    }
+    &:last-child {
+      div {
+        margin-right: 0;
+      }
+    }
+  }
 `
 
 const Projects = props => {
   const allCards = props.projects.map(project => (
-    <div>
-      <ProjectCard key={project.node.id} project={project} />
-    </div>
+    <ProjectCard key={project.node.id} project={project} />
   ))
 
   return (

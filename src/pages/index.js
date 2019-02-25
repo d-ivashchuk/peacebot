@@ -28,6 +28,10 @@ class IndexPage extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[
+            {
+              name: 'google-site-verification',
+              content: 'G8mlRoi3rF4Ld76FipN7GYOsKmP3Lhfv8TfOb_zUuIY',
+            },
             { name: 'og:title', content: siteTitle },
             { name: 'og:description', content: siteDescription },
             // { name: 'og:image', content: 'summary_large_image' },

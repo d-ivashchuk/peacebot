@@ -7,9 +7,11 @@ const StyledCard = styled.div`
   max-width: 330px;
   display: flex;
   flex-direction: column;
-  margin: 12px;
   border: 1.5px solid #d5d6da;
   border-radius: 6px;
+  @media (max-width: 1015px) {
+    margin: 15px !important;
+  }
 `
 const StyledImage = styled(Img)`
   height: 200px;
@@ -38,6 +40,7 @@ const StyledInfo = styled.div`
 `
 const StyledTag = styled.p`
   color: #15cc79;
+  padding-left: 10px;
 `
 const StyledDescription = styled.p`
   color: #d5d6da;
