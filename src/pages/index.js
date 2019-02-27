@@ -21,8 +21,11 @@ class IndexPage extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const siteDescription = get(
       this.props,
-      'data.site.siteMetadata.siteDescription'
+      'data.site.siteMetadata.description'
     )
+    const cardPic = this.props.data.cardPic.childImageSharp.resize.src
+    const siteUrl = `https://www.peacebot.pro`
+
     return (
       <>
         <Helmet
@@ -34,8 +37,12 @@ class IndexPage extends React.Component {
             },
             { property: 'og:title', content: siteTitle },
             { property: 'og:description', content: siteDescription },
-            // { name: 'og:image', content: 'summary_large_image' },
-            // { name: 'twitter:card', content: 'summary_large_image' },
+            { property: 'og:image', content: siteUrl + cardPic },
+            { name: 'twitter:card', content: 'summary_large_image' },
+            {
+              name: 'twitter:image',
+              content: siteUrl + cardPic,
+            },
             { name: 'twitter:site', content: '@peacebot_t' },
             { name: 'twitter:title', content: siteTitle },
           ]}
@@ -57,9 +64,19 @@ export default IndexPage
 
 export const query = graphql`
   query {
+    cardPic: file(absolutePath: { regex: "/cat.jpg/" }) {
+      childImageSharp {
+        resize(width: 1800) {
+          src
+          width
+          height
+        }
+      }
+    }
     site {
       siteMetadata {
         title
+        description
       }
     }
     allContentfulProject {
