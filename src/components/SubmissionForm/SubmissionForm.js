@@ -57,6 +57,7 @@ const FormField = styled.p`
     border-radius: 6px;
     border: 2px solid #d5d6da;
     box-shadow: none;
+    -webkit-appearance: none;
     transition: border 0.3s;
     color: #2d3047;
     :focus {
@@ -170,7 +171,7 @@ class SubmissionForm extends React.Component {
           <FormField>
             <label>Objective </label>
             <input type="objective" name="objective" required />
-            <SubLabel>E.G. Logo design</SubLabel>
+            <SubLabel>E.g. Logo design</SubLabel>
           </FormField>
           <FormField>
             <label>Additional info </label>

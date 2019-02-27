@@ -69,10 +69,7 @@ const SocialBlock = () => {
       <SocialIcon link={'https://dribbble.com/peacebot'} icon={dribbble} />
       <SocialIcon link={'https://instagram.com/peacebot'} icon={instagram} />
       <SocialIcon link={'https://t.me/peacebot_t'} icon={telegram} />
-      <SocialIcon
-        link={'https://www.behance.net/user/?username=peacebot'}
-        icon={behance}
-      />
+      <SocialIcon link={'https://behance.net/peacebot'} icon={behance} />
       <SocialIcon link={'https://twitter.com/peacebot_t'} icon={twitter} />
     </StyledSocialBlock>
   )
