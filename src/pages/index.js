@@ -37,7 +37,11 @@ class IndexPage extends React.Component {
             },
             { property: 'og:title', content: siteTitle },
             { property: 'og:description', content: siteDescription },
+            { property: 'og:url', content: 'https://peacebot.pro' },
             { property: 'og:image', content: siteUrl + cardPic },
+            { property: 'og:image:type', content: 'image/png' },
+            { property: 'og:image:width', content: '1200' },
+            { property: 'og:image:height', content: '630' },
             { name: 'twitter:card', content: 'summary_large_image' },
             {
               name: 'twitter:image',
@@ -64,7 +68,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    cardPic: file(absolutePath: { regex: "/cat.jpg/" }) {
+    cardPic: file(absolutePath: { regex: "/preview.png/" }) {
       childImageSharp {
         resize(width: 1800) {
           src

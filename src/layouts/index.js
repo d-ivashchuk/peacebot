@@ -13,7 +13,7 @@ import pattern from '../assets/pattern.svg'
 
 const Bg = styled(pattern)`
   position: fixed !important;
-  opacity:0.6;
+  opacity: 0.6;
   margin: 0;
   padding: 0;
   top: 0;
@@ -39,8 +39,11 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content: 'Peacebot | Designs with minimalist approach ',
+            },
+            { name: 'keywords', content: 'design' },
           ]}
         >
           <html lang="en" />
