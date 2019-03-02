@@ -7,7 +7,8 @@ import GlobalStyle from '../styles/global'
 
 import styled from 'styled-components'
 
-import Header from '../components/Header/header'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 
 import pattern from '../assets/pattern.svg'
 
@@ -21,6 +22,10 @@ const Bg = styled(pattern)`
   height: 100%;
   width: 100%;
   z-index: -10;
+`
+
+const Body = styled.div`
+  height: 100%;
 `
 
 const Layout = ({ children }) => (
@@ -51,7 +56,8 @@ const Layout = ({ children }) => (
         <Bg />
 
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>{children}</div>
+        <Body>{children}</Body>
+        <Footer />
         <GlobalStyle />
       </>
     )}
