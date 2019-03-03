@@ -7,7 +7,7 @@ import GlobalStyle from '../styles/global'
 
 import styled from 'styled-components'
 
-import Header from '../components/Header/Header'
+import Header from '../components/Header/header'
 import Footer from '../components/Footer/Footer'
 
 import pattern from '../assets/pattern.svg'
