@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// Fix layout
 const StyledFooter = styled.div`
   max-width: 500px;
   margin: auto;
